@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FXABOL | Official Website</title>
+    <meta name="description" content="FXABOL — Stock Market Trader, Software Developer and Programmer. Aim Big Or Lose.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #080a0f;
+            color: #ffffff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            background: #1264ff;
+            opacity: 0.09;
+            filter: blur(150px);
+            border-radius: 50%;
+            top: -200px;
+            left: 50%;
+            transform: translateX(-50%);
+            pointer-events: none;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(100% - 40px, 1000px);
+            margin: auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 28px 0;
+            border-bottom: 1px solid #20232c;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 900;
+            letter-spacing: 3px;
+        }
+
+        .status {
+            color: #a0a7b7;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        .status span {
+            display: inline-block;
+            width: 7px;
+            height: 7px;
+            background: #3984ff;
+            border-radius: 50%;
+            margin-right: 7px;
+        }
+
+        main {
+            text-align: center;
+            padding: 120px 0 90px;
+        }
+
+        .eyebrow {
+            color: #4388ff;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 5px;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: clamp(55px, 12vw, 112px);
+            font-weight: 900;
+            letter-spacing: 5px;
+            line-height: 1.1;
+        }
+
+        .slogan {
+            font-size: clamp(13px, 2.5vw, 19px);
+            font-weight: bold;
+            letter-spacing: 5px;
+            margin-top: 22px;
+            color: #b7c1d4;
+        }
+
+        .divider {
+            width: 65px;
+            height: 3px;
+            background: #367cff;
+            margin: 38px auto;
+        }
+
+        .intro {
+            max-width: 580px;
+            margin: auto;
+            color: #9ba4b5;
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        section {
+            padding: 45px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 12px;
+            letter-spacing: 4px;
+            color: #4388ff;
+            margin-bottom: 30px;
+        }
+
+        .expertise {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .card {
+            background: #0e1119;
+            border: 1px solid #222735;
+            border-radius: 8px;
+            padding: 30px 18px;
+            text-align: center;
+            transition: border-color 0.25s, transform 0.25s;
+        }
+
+        .card:hover {
+            border-color: #367cff;
+            transform: translateY(-4px);
+        }
+
+        .card-number {
+            font-size: 12px;
+            color: #4388ff;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+        }
+
+        .card h3 {
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 12px;
+            color: #8993a6;
+            line-height: 1.7;
+        }
+      .social-section {
+            padding: 75px 0 100px;
+            text-align: center;
+        }
+
+        .social-description {
+            color: #929bad;
+            font-size: 14px;
+            line-height: 1.8;
+            margin: -10px auto 30px;
+        }
+
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .social-link {
+            min-width: 125px;
+            padding: 14px 20px;
+            border: 1px solid #2a3040;
+            border-radius: 5px;
+            color: #dbe4f5;
+            font-size: 13px;
+            transition: 0.25s;
+        }
+
+        .social-link:hover {
+            background: #367cff;
+            border-color: #367cff;
+            color: white;
+        }
+
+        .username {
+            color: #4388ff;
+            margin-top: 28px;
+            font-size: 13px;
+            letter-spacing: 2px;
+        }
+
+        footer {
+            border-top: 1px solid #20232c;
+            padding: 25px 0;
+            text-align: center;
+            color: #687184;
+            font-size: 11px;
+            letter-spacing: 1px;
+        }
+
+        footer strong {
+            color: #aab4c7;
+        }
+
+        @media (max-width: 650px) {
+            main {
+                padding: 90px 0 60px;
+            }
+
+            .expertise {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 25px 18px;
+            }
+
+            .slogan {
+                letter-spacing: 3px;
+            }
+
+            .status {
+                font-size: 10px;
+            }
+
+            .social-link {
+                min-width: 42%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <a href="#" class="logo">FXABOL</a>
+
+            <div class="status">
+                <span></span> OFFICIAL WEBSITE
+            </div>
+        </header>
+
+        <main>
+            <p class="eyebrow">TRADING · TECHNOLOGY · DEVELOPMENT</p>
+
+            <h1>FXABOL</h1>
+
+            <p class="slogan">AIM BIG OR LOSE</p>
+
+            <div class="divider"></div>
+
+            <p class="intro">
+                Focused on the financial markets, software development,
+                and building tools for the future.
+                Think bigger. Build smarter. Execute with purpose.
+            </p>
+        </main>
+
+        <section>
+            <h2 class="section-title">MY EXPERTISE</h2>
+
+            <div class="expertise">
+
+                <article class="card">
+                    <div class="card-number">01 / TRADING</div>
+                    <h3>Stock Market Trader</h3>
+                    <p>
+                        Financial markets, technical analysis,
+                        and trading strategies.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-number">02 / TECHNOLOGY</div>
+                    <h3>Software Developer &amp; Programmer</h3>
+                    <p>
+                        Programming, software development,
+                        and trading automation.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-number">03 / COMMUNITY</div>
+                    <h3>INNER CIRCLE USER</h3>
+                    <p>
+                        Continuous learning, development,
+                        and commitment to improvement.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="social-section">
+            <h2 class="section-title">FIND ME EVERYWHERE</h2>
+
+            <p class="social-description">
+                Connect with me across platforms under the username FXABOL.
+            </p>
+
+            <div class="social-links">
+
+                <!-- Replace the example URLs with your actual profile links. -->
